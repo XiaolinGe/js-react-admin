@@ -7,7 +7,7 @@
       "test": "echo \"Error: no test specified\" && exit 1",
       "start": "babel-node server.js ",
       "build": "webpack",
-      "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base public"
+      "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base public --port 8000"
   },
     "keywords": [
     "node.js",
