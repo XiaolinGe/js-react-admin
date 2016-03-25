@@ -1,0 +1,14 @@
+@import './common.scss';
+
+#treeview {
+    width: 15%;
+    float: left;
+}
+
+#child1 {
+    width:30px;
+    height:30px;
+    color:red;
+    position:relative;
+    top:600px;
+}
