@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
-
+import './table.scss';
 
 var products = [
   {
@@ -112,7 +112,7 @@ function onRowSelect(row, isSelected){
 var selectRowProp = {
   mode: "radio",
   clickToSelect: true,
-  bgColor: "rgb(238, 193, 213)",
+  bgColor: "#acd8f9",
   onSelect: onRowSelect
 };
 
@@ -125,7 +125,7 @@ export default class Table extends React.Component {
 
   render() {
     return (
-      <BootstrapTable data={products} pagination={true} selectRow={selectRowProp}>
+      <BootstrapTable data={products} pagination={true} selectRow={selectRowProp} trClassName="table_tr">
       <TableHeaderColumn dataField="id" isKey={true} dataSort={true}>Product ID</TableHeaderColumn>
       <TableHeaderColumn dataField="name" dataSort={true}>Product Name</TableHeaderColumn>
       <TableHeaderColumn dataField="price" dataSort={true}>Product Price</TableHeaderColumn>
