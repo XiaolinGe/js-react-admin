@@ -1,28 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react'
 import ReactDOM from 'react-dom';
-import Table from './table';
-import Tree from './treeview';
-import TreeTab from './treetab';
-import SearchBox from './searchBox';
-import ToolBar from './toolBar';
+import { Provider } from 'react-redux'
+import configureStore from './store/configureStore'
+import App from './app'
 
+const store = configureStore();
 
-ReactDOM.render(
-  <div>
-  <div className="head" style={{width:"100%",height:"50px",backgroundColor:"#337ab7"}}></div>
-  <div className="">
-    <Tree />
-  <TreeTab />
-  <SearchBox />
-  <ToolBar />
-  <Table />
-  </div>
-  </div>,
-  document.getElementById("app")
+ReactDOM.render (
+  <Provider store={store}>
+  <App />
+  </Provider>,
+  document.getElementById('app')
 );
-
-
-
 
 
 
