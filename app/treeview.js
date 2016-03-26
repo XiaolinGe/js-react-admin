@@ -5,6 +5,7 @@ import jQuery from 'jquery';
 
 
 
+
 import './treeview.scss';
 
 
@@ -16,23 +17,30 @@ export default class Tree extends React.Component {
     $('#treeview').treeview({
       data: getTree(),
       levels: 5,
-      showBorder: false,
-      showBorder:'false',
       color:'#428bca',
-      enableLinks:true,
-      expandIcon: 'glyphicon glyphicon-chevron-right'
+     // borderColor:'#ffffff',
+      expandIcon: 'glyphicon glyphicon-folder-open',
+      enableLinks:true
+
     });
 
+    $(".node-treeview:eq(1)").click(this.handleClick);
+
+
+  }
+
+  handleClick() {
+    $(".nav-tabs>li:eq(0)>a").show("500");
   }
 
   render() {
     return (
       <div>
-      <div id="treeview" className=""></div>
-
+      <div id="treeview"></div>
       </div>
     );
   }
+
 };
 
 
