@@ -3,6 +3,40 @@ import ReactDOM from 'react-dom';
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import './table.scss';
 
+
+
+function onRowSelect(row, isSelected){
+  console.log(row);
+  console.log("selected: " + isSelected)
+}
+
+var selectRowProp = {
+  mode: "radio",
+  clickToSelect: true,
+  bgColor: "#acd8f9",
+  onSelect: onRowSelect
+};
+
+
+
+export default class Table extends React.Component {
+  constructor() {
+    super();
+  }
+
+  render() {
+    return (
+      <BootstrapTable data={products} pagination={true} selectRow={selectRowProp} trClassName="table_tr">
+      <TableHeaderColumn dataField="id" isKey={true} dataSort={true}>Product ID</TableHeaderColumn>
+      <TableHeaderColumn dataField="name" dataSort={true}>Product Name</TableHeaderColumn>
+      <TableHeaderColumn dataField="price" dataSort={true}>Product Price</TableHeaderColumn>
+      </BootstrapTable>
+
+    );
+  }
+};
+
+
 var products = [
   {
     id: 1,
@@ -103,34 +137,3 @@ var products = [
     price: 160
   }
 ];
-
-function onRowSelect(row, isSelected){
-  console.log(row);
-  console.log("selected: " + isSelected)
-}
-
-var selectRowProp = {
-  mode: "radio",
-  clickToSelect: true,
-  bgColor: "#acd8f9",
-  onSelect: onRowSelect
-};
-
-
-
-export default class Table extends React.Component {
-  constructor() {
-    super();
-  }
-
-  render() {
-    return (
-      <BootstrapTable data={products} pagination={true} selectRow={selectRowProp} trClassName="table_tr">
-      <TableHeaderColumn dataField="id" isKey={true} dataSort={true}>Product ID</TableHeaderColumn>
-      <TableHeaderColumn dataField="name" dataSort={true}>Product Name</TableHeaderColumn>
-      <TableHeaderColumn dataField="price" dataSort={true}>Product Price</TableHeaderColumn>
-      </BootstrapTable>
-
-    );
-  }
-};
