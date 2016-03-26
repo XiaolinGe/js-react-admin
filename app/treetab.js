@@ -12,10 +12,16 @@ export default class TreeTab extends React.Component {
   render() {
     return (
       <Tabs defaultActiveKey={3} className="treetab">
-      <Tab eventKey={1} title="Tab 1" id="#tab1" ></Tab>
-      <Tab eventKey={2} title="Tab 2"  id="#tab2" ></Tab>
-      <Tab eventKey={3} title="Tab 3" id="#tab3" ></Tab>
+      {tab.map( ({title,id,content},index) =>
+        (<Tab eventKey={index} key={index} title={title} id={id}>{content}</Tab>) )}
       </Tabs>
       )
   }
   };
+
+let tab = [
+  {title:"Tab 1", id:"tab1",  content:""},
+  {title:"Tab 2", id:"tab2",  content:""},
+  {title:"Tab 3", id:"tab3",  content:""},
+
+]
