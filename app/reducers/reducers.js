@@ -2,9 +2,9 @@ import { combineReducers } from 'redux';
 import { RECEIVE_INFO, FETCH_INFO } from '../actions/actions';
 
 const initialState = {
-
-  products: [],
-  treeview: []
+  treeview: [],
+  tab: [],
+  products: []
 };
 
 function info(state = initialState, action) {

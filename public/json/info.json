@@ -1,123 +1,130 @@
 {
-    "products": [
-  {
-    "id": 1,
-    "name": "Product1",
-    "price": 120
-  },{
-    "id": 2,
-    "name": "Product2",
-    "price": 80
-  },{
-    "id": 3,
-    "name": "Product3",
-    "price": 207
-  },{
-    "id": 4,
-    "name": "Product4",
-    "price": 100
-  },{
-    "id": 5,
-    "name": "Product5",
-    "price": 150
-  },{
-    "id": 6,
-    "name": "Product1",
-    "price": 160
-  }, {
-    "id": 11,
-    "name": "Product1",
-    "price": 120
-  },{
-    "id": 12,
-    "name": "Product2",
-    "price": 80
-  },{
-    "id": 13,
-    "name": "Product3",
-    "price": 207
-  },{
-    "id": 14,
-    "name": "Product4",
-    "price": 100
-  },{
-    "id": 15,
-    "name": "Product5",
-    "price": 150
-  },{
-    "id": 16,
-    "name": "Product1",
-    "price": 160
-  },
-  {
-    "id": 21,
-    "name": "Product1",
-    "price": 120
-  },{
-    "id": 22,
-    "name": "Product2",
-    "price": 80
-  },{
-    "id": 23,
-    "name": "Product3",
-    "price": 207
-  },{
-    "id": 24,
-    "name": "Product4",
-    "price": 100
-  },{
-    "id": 25,
-    "name": "Product5",
-    "price": 150
-  },{
-    "id": 26,
-    "name": "Product1",
-    "price": 160
-  }, {
-    "id": 31,
-    "name": "Product1",
-    "price": 120
-  },{
-    "id": 32,
-    "name": "Product2",
-    "price": 80
-  },{
-    "id": 33,
-    "name": "Product3",
-    "price": 207
-  },{
-    "id": 34,
-    "name": "Product4",
-    "price": 100
-  },{
-    "id": 35,
-    "name": "Product5",
-    "price": 150
-  },{
-    "id": 36,
-    "name": "Product1",
-    "price": 160
-  }],
     "treeview": [{
-    "text": "Parent 1",
+        "text": "Parent 1",
 
-    "nodes": [
-      {
-        "text": "Child 1",
-        "href": "#child1"
-      },
-      {
-        "text": "Child 2",
-        "href": "#child2"
-      },
-      {
-        "text": "Child 3",
-        "href": "#child3"
-      },
-      {
-        "text": "Child 4",
-        "href": "#child4"
-      }
-    ]
-  }
-]}
+        "nodes": [
+            {
+                "text": "Child 1",
+                "href": "#child1"
+            },
+            {
+                "text": "Child 2",
+                "href": "#child2"
+            },
+            {
+                "text": "Child 3",
+                "href": "#child3"
+            },
+            {
+                "text": "Child 4",
+                "href": "#child4"
+            }
+        ]
+    }
+                ],
+    "tab": [
+  {"title":"Tab 1", "id":"tab1",  "content":""},
+  {"title":"Tab 2", "id":"tab2",  "content":""},
+  {"title":"Tab 3", "id":"tab3",  "content":""}
+
+    ],
+    "products": [
+        {
+            "id": 1,
+            "name": "Product1",
+            "price": 120
+        },{
+            "id": 2,
+            "name": "Product2",
+            "price": 80
+        },{
+            "id": 3,
+            "name": "Product3",
+            "price": 207
+        },{
+            "id": 4,
+            "name": "Product4",
+            "price": 100
+        },{
+            "id": 5,
+            "name": "Product5",
+            "price": 150
+        },{
+            "id": 6,
+            "name": "Product1",
+            "price": 160
+        }, {
+            "id": 11,
+            "name": "Product1",
+            "price": 120
+        },{
+            "id": 12,
+            "name": "Product2",
+            "price": 80
+        },{
+            "id": 13,
+            "name": "Product3",
+            "price": 207
+        },{
+            "id": 14,
+            "name": "Product4",
+            "price": 100
+        },{
+            "id": 15,
+            "name": "Product5",
+            "price": 150
+        },{
+            "id": 16,
+            "name": "Product1",
+            "price": 160
+        },
+        {
+            "id": 21,
+            "name": "Product1",
+            "price": 120
+        },{
+            "id": 22,
+            "name": "Product2",
+            "price": 80
+        },{
+            "id": 23,
+            "name": "Product3",
+            "price": 207
+        },{
+            "id": 24,
+            "name": "Product4",
+            "price": 100
+        },{
+            "id": 25,
+            "name": "Product5",
+            "price": 150
+        },{
+            "id": 26,
+            "name": "Product1",
+            "price": 160
+        }, {
+            "id": 31,
+            "name": "Product1",
+            "price": 120
+        },{
+            "id": 32,
+            "name": "Product2",
+            "price": 80
+        },{
+            "id": 33,
+            "name": "Product3",
+            "price": 207
+        },{
+            "id": 34,
+            "name": "Product4",
+            "price": 100
+        },{
+            "id": 35,
+            "name": "Product5",
+            "price": 150
+        },{
+            "id": 36,
+            "name": "Product1",
+            "price": 160
+        }]
+}
