@@ -4,6 +4,7 @@ import { RECEIVE_INFO, FETCH_INFO,ADD_TAB } from '../actions/actions';
 const initialState = {
   treeview: [],
   tabs: [],
+  defaultActiveKey: "",
   products: []
 };
 
@@ -29,5 +30,4 @@ function info(state = initialState, action) {
 const rootReducer = combineReducers({
   info
 });
-
 export default rootReducer;

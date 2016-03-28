@@ -41,9 +41,6 @@ export default class App extends React.Component {
       <div className="">
       <Tree />
       <TreeTab />
-      <SearchBox />
-      <ToolBar />
-      <Table />
       </div>
       </div>
     );

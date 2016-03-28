@@ -20,15 +20,16 @@ var Child = React.createClass({
 
 export default class TreeTab extends React.Component {
   constructor() {
-    super();  
+    super();
   }
+
+
   componentDidMount() {
-    let {tabs} = this.props;
-    let {actionKey,defaultActiveKey} = tabs;
-    console.log(defaultActiveKey);
+    let {tabs,defaultActiveKey} = this.props;
+    let {actionKey} = tabs;
   }
   render() {
-    let {tabs} = this.props;
+    let {tabs,defaultActiveKey} = this.props;
     let {actionKey} = tabs;
     
     // let panels = {
@@ -39,7 +40,7 @@ export default class TreeTab extends React.Component {
     //  let Panel = panels[defaultActiveKey];
 
     return (
-      <Tabs defaultActiveKey={actionKey} className="treetab" >
+      <Tabs  className="treetab" activeKey={defaultActiveKey} >
       {tabs.map( ({text,actionKey,component},index) =>
         (<Tab eventKey={actionKey} key={index} title={text} >
         <Table/>
@@ -49,9 +50,9 @@ export default class TreeTab extends React.Component {
 
 
 function mapStateToProps(state) {
-  let {tabs} = state.info;
+  let {tabs,defaultActiveKey} = state.info;
  
-  return {tabs};
+  return {tabs,defaultActiveKey};
 }
 
 export default connect(mapStateToProps)(TreeTab);
