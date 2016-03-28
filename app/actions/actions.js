@@ -2,6 +2,7 @@ import $ from 'jquery';
 
 export const RECEIVE_INFO = 'RECEIVE_INFO';
 export const FETCH_INFO = 'FETCH_INFO';
+export const ADD_TAB = 'ADD_TAB';
 
 function receive_info(data) {
   return {
@@ -23,6 +24,15 @@ function fetch_info(id) {
 }
 
 
+function add_tab(data) {
+  return {
+    type: ADD_TAB,
+    context: {
+      fetching: true
+    }
+  };
+}
+
 
 export function getInfo(id) {
   return (dispatch, state) => {
@@ -32,5 +42,12 @@ export function getInfo(id) {
     });
     dispatch(fetch_info(id));
 
+  };
+}
+
+
+export function addTab(id) {
+  return (dispatch, state) => {
+    dispatch(add_tab(id));
   };
 }
