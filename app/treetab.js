@@ -5,18 +5,6 @@ import { Tabs,Tab } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import Table from './table';
 import './treetab.scss';
-// Dynamic subcomponent render
-var Child = React.createClass({
-
-  render: function() {
-    return (
-      <div>
-      I am Child!
-      </div>
-    );
-  }
-
-});
 
 export default class TreeTab extends React.Component {
   constructor() {
@@ -32,21 +20,24 @@ export default class TreeTab extends React.Component {
     let {tabs,defaultActiveKey} = this.props;
     let {actionKey} = tabs;
     
-    // let panels = {
-    //  "products": Table,
-    // "users": Table,
-    // "orders": Child
-    // };
-    //  let Panel = panels[defaultActiveKey];
-
-    return (
+     let panels = {
+      products: Table,
+      users: Table,
+      orders: Table
+     };
+      return (
       <Tabs  className="treetab" activeKey={defaultActiveKey} >
-      {tabs.map( ({text,actionKey,component},index) =>
-        (<Tab eventKey={actionKey} key={index} title={text} >
-        <Table/>
-      </Tab>))}
+        {tabs.map( ({text,actionKey,component},index) =>{
+          let Panel = panels[actionKey];          
+         return  ( <Tab eventKey={actionKey} key={index} title={text} >
+            <Panel/>
+           </Tab>) }) }
       </Tabs>)}
   };
+
+
+
+
 
 
 function mapStateToProps(state) {
