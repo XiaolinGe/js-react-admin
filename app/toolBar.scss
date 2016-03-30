@@ -1,6 +1,6 @@
 @import './common.scss';
 
 .btn-toolbar {
-    width: 85%;
+    @include child_width;
     float: left;
 }

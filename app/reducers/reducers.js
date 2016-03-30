@@ -1,11 +1,12 @@
 import { combineReducers } from 'redux';
-import { RECEIVE_INFO, FETCH_INFO,ADD_TAB } from '../actions/actions';
+import { RECEIVE_INFO, FETCH_INFO,ADD_TAB,NEW_FORM } from '../actions/actions';
 
 const initialState = {
   treeview: [],
   tabs: [],
   defaultActiveKey: "",
-  products: []
+  products: [],
+  button: []
 };
 
 function info(state = initialState, action) {
@@ -21,6 +22,12 @@ function info(state = initialState, action) {
       return Object.assign({}, state, {
         defaultActiveKey: action.tab.actionKey,
         tabs:tabs
+      });
+    case NEW_FORM:
+       tabs = state.tabs.concat(action.tab);
+      return Object.assign({}, state, {
+        defaultActiveKey:action.tab.actionKey,
+        tabs: tabs
       });
     default:
       return state;

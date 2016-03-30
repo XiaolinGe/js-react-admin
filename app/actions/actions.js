@@ -3,6 +3,7 @@ import $ from 'jquery';
 export const RECEIVE_INFO = 'RECEIVE_INFO';
 export const FETCH_INFO = 'FETCH_INFO';
 export const ADD_TAB = 'ADD_TAB';
+export const NEW_FORM= 'NEW_FORM';
 
 function receive_info(data) {
   return {
@@ -42,12 +43,5 @@ export function getInfo(id) {
     });
     dispatch(fetch_info(id));
 
-  };
-}
-
-
-export function addTab(id) {
-  return (dispatch, state) => {
-    dispatch(add_tab(id));
   };
 }

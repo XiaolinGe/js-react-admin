@@ -4,6 +4,8 @@ import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import { connect } from 'react-redux';
 import './table.scss';
 
+import SearchBox from './searchBox';
+import ToolBar from './toolBar';
 
 
 function onRowSelect(row, isSelected){
@@ -29,11 +31,15 @@ export default class Table extends React.Component {
     let {products} = this.props;
 
     return (
+      <div>
+      <SearchBox />
+      <ToolBar  />
       <BootstrapTable data={products} pagination={true} selectRow={selectRowProp} trClassName="table_tr">
       <TableHeaderColumn dataField="id" isKey={true} dataSort={true}>Product ID</TableHeaderColumn>
       <TableHeaderColumn dataField="name" dataSort={true}>Product Name</TableHeaderColumn>
       <TableHeaderColumn dataField="price" dataSort={true}>Product Price</TableHeaderColumn>
       </BootstrapTable>
+      </div>
 
     );
   }

@@ -9,6 +9,7 @@ import Tree from './treeview';
 import TreeTab from './treetab';
 import SearchBox from './searchBox';
 import ToolBar from './toolBar';
+import Form from './form';
 
 
 //let history = createHashHistory();

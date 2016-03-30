@@ -37,5 +37,11 @@
             "name": "Product3",
             "price": 207
         }
+    ],
+    "button": [
+        {"text": "New",
+         "actionKey": "new",
+         "component": "Form"
+        }
     ]
 }
