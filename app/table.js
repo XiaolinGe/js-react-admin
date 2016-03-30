@@ -6,6 +6,7 @@ import './table.scss';
 
 import SearchBox from './searchBox';
 import ToolBar from './toolBar';
+import { GET_SELECTED,NO_SELECTED } from './actions/actions.js';
 
 
 function onRowSelect(row, isSelected){
@@ -13,22 +14,28 @@ function onRowSelect(row, isSelected){
   console.log("selected: " + isSelected)
 }
 
-var selectRowProp = {
-  mode: "radio",
-  clickToSelect: true,
-  bgColor: "#acd8f9",
-  onSelect: onRowSelect
-};
-
-
-
 export default class Table extends React.Component {
   constructor() {
     super();
   }
 
   render() {
-    let {products} = this.props;
+    let {products,dispatch} = this.props;
+    let selectRowProp = {
+      mode: "radio",
+      clickToSelect: true,
+      bgColor: "#acd8f9",
+      onSelect: function(row,isSelected){
+        console.log(isSelected);
+        if(isSelected === true){
+          dispatch({type:GET_SELECTED,id:row.id,isSelected:isSelected});
+        }else {
+          dispatch({type:NO_SELECTED,id:row.id,isSelected:isSelected});
+        }
+      }
+    };
+
+
 
     return (
       <div>

@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { RECEIVE_INFO, FETCH_INFO,ADD_TAB,NEW_FORM,SELECT_TAB } from '../actions/actions';
+import { RECEIVE_INFO, FETCH_INFO,ADD_TAB,NEW_FORM,SELECT_TAB,GET_SELECTED,DELETED_FORM,NO_SELECTED } from '../actions/actions';
 
 const initialState = {
   treeview: [],
@@ -24,7 +24,7 @@ function info(state = initialState, action) {
         tabs:tabs
       });
     case NEW_FORM:
-       tabs = state.tabs.concat(action.tab);
+      tabs = state.tabs.concat(action.tab);
       return Object.assign({}, state, {
         defaultActiveKey:action.tab.actionKey,
         tabs: tabs
@@ -33,6 +33,22 @@ function info(state = initialState, action) {
       return Object.assign({}, state, {
         defaultActiveKey:action.actionKey
       });
+    case GET_SELECTED:
+      return Object.assign({}, state, {
+        selectId:action.id
+      });
+    case NO_SELECTED:
+      return Object.assign({}, state, {
+        selectId: undefined
+      });
+  //  case DELETED_FORM:
+   //   let newProducts = state.products.filter(function(e) {
+   //     return e.id !== action.selectId;
+   //   });
+   //   return Object.assign({}, state, {
+   //     products: newProducts,
+   //     selectId: undefined
+    //  });
     default:
       return state;
   }

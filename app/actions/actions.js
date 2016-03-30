@@ -5,6 +5,9 @@ export const FETCH_INFO = 'FETCH_INFO';
 export const ADD_TAB = 'ADD_TAB';
 export const NEW_FORM= 'NEW_FORM';
 export const SELECT_TAB = 'SELECT_TAB';
+export const GET_SELECTED = 'GET_SELECTED';
+export const NO_SELECTED = 'NO_SELECTED';
+export const DELETED_FORM = 'DELETED_FORM';
 
 function receive_info(data) {
   return {
