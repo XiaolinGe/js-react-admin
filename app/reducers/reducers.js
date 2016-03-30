@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { RECEIVE_INFO, FETCH_INFO,ADD_TAB,NEW_FORM } from '../actions/actions';
+import { RECEIVE_INFO, FETCH_INFO,ADD_TAB,NEW_FORM,SELECT_TAB } from '../actions/actions';
 
 const initialState = {
   treeview: [],
@@ -28,6 +28,10 @@ function info(state = initialState, action) {
       return Object.assign({}, state, {
         defaultActiveKey:action.tab.actionKey,
         tabs: tabs
+      });
+    case SELECT_TAB:
+      return Object.assign({}, state, {
+        defaultActiveKey:action.actionKey
       });
     default:
       return state;

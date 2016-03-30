@@ -4,6 +4,7 @@ export const RECEIVE_INFO = 'RECEIVE_INFO';
 export const FETCH_INFO = 'FETCH_INFO';
 export const ADD_TAB = 'ADD_TAB';
 export const NEW_FORM= 'NEW_FORM';
+export const SELECT_TAB = 'SELECT_TAB';
 
 function receive_info(data) {
   return {
