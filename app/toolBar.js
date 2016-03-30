@@ -38,11 +38,27 @@ export default class ToolBar extends React.Component {
 
 
     }else{
-      let newProducts = products.filter(function(e) {
-        return e.id !== selectId;
+      BootstrapDialog.show({
+        title: 'CONFIRM',
+        message: 'Are you sure to delete this product',
+        buttons: [ {
+          label: 'YES',
+          cssClass: 'btn-primary',
+          action: function(dialogItself){
+            let newProducts = products.filter(function(e) {
+              return e.id !== selectId;
+            });
+            selectId=undefined;
+            console.log(newProducts);
+            dialogItself.close();
+          }
+        }, {
+          label: 'NO',
+          action: function(dialogItself){
+            dialogItself.close();
+          }
+        }]
       });
-      selectId=undefined;
-      console.log(newProducts);
     //  dispatch({type:DELETED_FORM,selectId:selectId});
     }
 

@@ -8,7 +8,6 @@ import SearchBox from './searchBox';
 import ToolBar from './toolBar';
 import { GET_SELECTED,NO_SELECTED } from './actions/actions.js';
 
-
 function onRowSelect(row, isSelected){
   console.log(row);
   console.log("selected: " + isSelected)
