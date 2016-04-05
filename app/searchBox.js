@@ -17,7 +17,7 @@ export default class SearchBox extends React.Component {
       <Navbar.Toggle />
       </Navbar.Header>
       <Navbar.Collapse>
-      <Navbar.Form pullLeft className="form-horizontal">
+      <Navbar.Form pullLeft className="form-horizontal" pullLeft>
       <Input type="text" placeholder="Search" label="Product ID" labelClassName="col-xs-5" wrapperClassName="col-xs-7"/>
       {' '}
       <Input type="text" placeholder="Search" label="Product Name" labelClassName="col-xs-5" wrapperClassName="col-xs-7"/>

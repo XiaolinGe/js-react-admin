@@ -1,0 +1,47 @@
+{
+    "treeview": [{
+        "text": "Parent 1",
+
+        "nodes": [
+            {
+                "text": "Child 1",
+                "actionKey": "products",
+                "component": "Table"
+            },
+            {
+                "text": "Child 2",
+                "actionKey": "users",
+                "component": "Table"
+            },
+            {
+                "text": "Child 3",
+                "actionKey": "orders",
+                "component": "Table"
+            }
+        ]
+    }],
+    "tabs": [
+    ],
+    "defaultActiveKey" :"",
+    "products": [
+        {
+            "id": 1,
+            "name": "Product1",
+            "price": 120
+        },{
+            "id": 2,
+            "name": "Product2",
+            "price": 80
+        },{
+            "id": 3,
+            "name": "Product3",
+            "price": 207
+        }
+    ],
+    "button": [
+        {"text": "New",
+         "actionKey": "new",
+         "component": "Form"
+        }
+    ]
+}
