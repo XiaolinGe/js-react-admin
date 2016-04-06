@@ -5,7 +5,7 @@ var node_modules = path.resolve(__dirname, 'node_modules');
 var config = {
   entry: [
     'webpack/hot/dev-server',
-    'webpack-dev-server/client?http://localhost:8080',
+    'webpack-dev-server/client?http://localhost:8000',
     path.resolve(__dirname, 'app/main.js')
   ],
   output: {
