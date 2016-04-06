@@ -5,7 +5,7 @@ This is a React-based web admin back-end UI project providing some features in w
 * Quick Start
 
 #+BEGIN_SRC javascript
- git clone https://github.com/XiaolinGe/js-admin.git
+ git clone https://github.com/XiaolinGe/js-react-admin.git
 
  npm run dev
 #+END_SRC
