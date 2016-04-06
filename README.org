@@ -1,0 +1,94 @@
+* Description
+
+This is a React-based web admin back-end UI project providing some features in web admin system.
+
+* Quick Start
+
+#+BEGIN_SRC javascript
+ git clone https://github.com/XiaolinGe/js-admin.git
+
+ npm run dev
+#+END_SRC
+
+
+* Techs & Tools
+
+** Webpack
+
+Webpack is module bundler, it takes your dependencies, puts them through loaders and outputs browser compatible static assets. All of this is based on configuration.
+
+** SASS/CSS
+
+Sass is css preprocessor, it is an extension of CSS that allows you to use variables, nested rules, mixins, inline imports, and more, all with a fully CSS-compatible syntax.
+
+
+** React/ReactBoostrap/BootstrapTreeView/ReactBootstrapTable
+
+React is a javascript library for building user interfaces.
+
+React-Bootstrap is a library of reusable front-end components. It is based on React and Bootstrap.
+
+BootstrapTreeView is a simple and elegant solution to displaying hierarchical tree structures while leveraging the best that Twitter Bootstrap has to offer.
+
+ReactBootstrapTable is a React.js table for bootstrap, it's a configurable, functional table component.
+
+** Flux/Redux
+
+Flux is the application architecture for building client-side web applications. It complements React's composable view components by utilizing a unidirectional data flow.
+
+Redux is a predictable state container for JavaScript apps.
+
+
+[[./images/redux.png]]
+
+
+** React Router
+
+React-router is a complete routing library for React. It keeps your UI in sync with the URL.
+
+
+
+* APIs
+
+** /api/admin
+
+| description | Get all the information of the entire website |
+|-------------+-----------------------------------------------|
+| URL path    | /api/admin                                    |
+|-------------+-----------------------------------------------|
+| URL method  | GET                                           |
+|-------------+-----------------------------------------------|
+
+ data structure
+
+
+#+BEGIN_SRC json
+{
+    "treeview": [{
+        "text": "1",
+        "nodes": [
+            {
+                "text": "1",
+                "actionKey": "1",
+                "component": "1"
+            } ...
+        ]
+    }],
+    "tabs": [{} ...],
+    "defaultActiveKey" :"1",
+    "products": [
+        {
+            "id": 1,
+            "name": "1",
+            "price": 1
+        } ...
+    ],
+    "button": [
+        {"text": "1",
+         "actionKey": "1",
+         "component": "1"
+        }
+    ]
+}
+
+#+END_SRC
